@@ -1,0 +1,165 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using OpenQA.Selenium;
+
+namespace Автотест_ФБ
+{
+    public partial class Form1 : Form
+
+    {
+        IWebDriver Browser;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Browser = new OpenQA.Selenium.Chrome.ChromeDriver();
+            Browser.Manage().Window.Maximize();
+            Browser.Navigate().GoToUrl("file:///C:/Users/User/Desktop/codepen_qpvZOp220118/index.html");
+
+            { 
+            IWebElement Element1 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '1']"));
+            Element1.Click();
+
+            IWebElement Element2 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '2']"));
+            Element2.Click();
+
+            IWebElement Element3 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '3']"));
+            Element3.Click();
+
+            IWebElement Element4 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '4']"));
+            Element4.Click();
+
+            IWebElement Element5 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '5']"));
+            Element5.Click();
+
+            IWebElement Element6 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '6']"));
+            Element6.Click();
+
+            IWebElement Element7 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '7']"));
+            Element7.Click();
+
+            IWebElement Element8 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '8']"));
+            Element8.Click();
+
+            IWebElement Element9 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '9']"));
+            Element9.Click();
+
+            IWebElement Element0 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '0']"));
+            Element0.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                IWebElement ElementPoint = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '.']"));
+                ElementPoint.Click();
+
+                Element9.Click();
+
+                Element7.Click();
+
+                Element4.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                IWebElement ElementDel = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key soft') and text() = '<']"));
+                ElementDel.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+
+                IWebElement ElementPlus = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key soft') and text() = '+']"));
+                ElementPlus.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                Element1.Click();
+                Element3.Click();
+                Element0.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                IWebElement ElementEqually = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key soft') and text() = '=']"));
+                ElementEqually.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                IWebElement ElementMinus = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key soft') and text() = '-']"));
+                ElementMinus.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                Element4.Click();
+                Element9.Click();
+                IWebElement Element00 = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key') and text() = '00']"));
+                Element00.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                ElementEqually.Click();
+                System.Threading.Thread.Sleep(1000);
+
+                IWebElement ElementMulti = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key soft') and text() = '*']"));
+                ElementMulti.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                Element4.Click();
+                Element9.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                ElementEqually.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                IWebElement ElementDiv = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key soft') and text() = '/']"));
+                ElementDiv.Click();
+
+                Element9.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                ElementEqually.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                ElementDiv.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                Element0.Click();
+
+                ElementEqually.Click();
+
+                System.Threading.Thread.Sleep(1000);
+
+                IWebElement ElementC = Browser.FindElement(By.XPath("//td[contains(@class, 'keyboard-key soft') and text() = 'C']"));
+                ElementC.Click();
+
+
+
+
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Browser.Quit();
+        }
+
+     
+
+        
+    }
+}
